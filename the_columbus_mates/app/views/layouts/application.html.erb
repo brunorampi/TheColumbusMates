@@ -4,11 +4,50 @@
     <title>TheColumbusMates</title>
     <%= csrf_meta_tags %>
 
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment-with-locales.min.js"></script>
   </head>
 
+  <header class=banner>
+    <h1>The Columbus Mates</h1>
+    <h3>A journey is best measured in friends, rather than miles</h3>
+
+  </header>
+
+  <div id="navigation-bar">
+  <!-- Does it have to be here???  -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+      }
+    </script>
+
+    <ul class="topnav" id="myTopnav">
+      <li><a href="/" class="brand-logo">Logo</a></li>
+      <li data-location="#columbus"><a> Meet Our Columbus(es)</a></li>
+      <li data-location="#contact-left"><a>news</a></li>
+      <li data-location="#contact-left"><a>location</a></li>
+      <li data-location="#contact-left"><a>sponsors</a></li>
+      <li class="icon">
+        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+      </li>
+    </ul>
+  </div>
+
   <body>
+
+
+
     <%= yield %>
   </body>
 </html>

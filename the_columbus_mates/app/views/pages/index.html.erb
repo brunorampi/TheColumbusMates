@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheColumbusMates</title>
+    <%= csrf_meta_tags %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment-with-locales.min.js"></script>
+  </head>
+
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i href="/trips/index" class="material-icons search">search</i>
+          <form action="trips/index" method="get">
+            <input type="text" id="autocomplete-input" class="autocomplete" name="destination" placeholder="Enter your travel destination">
+            <label for="autocomplete-input">Where do you want go?</label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id =quotes>
+    <h4 id=changeText></h4>
+
+    <script type="text/javascript">
+       var text = ["Traveling – it leaves you speechless, then turns you into a storyteller", "We travel, some of us forever, to seek other places, other lives, other souls", "The gladdest moment in human life, me thinks, is a departure into unknown lands", "I am not the same, having seen the moon shine on the other side of the world"];
+       var counter = 0;
+       var elem = document.getElementById("changeText");
+       setInterval(change, 5000);
+       function change() {
+        elem.innerHTML = text[counter];
+           counter++;
+           if(counter >= text.length) { counter = 0; }
+       }
+     </script>
+
+  </div>
+
+  <script>
+
+    $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+  </script>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="https://secure.static.tumblr.com/04a5e47ce151336370233caa62fadea9/r4tvbdn/JSenpcbzf/tumblr_static_tumblr_static_filename_640.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container" id="columbus">
+      <h2 class="header">Our Columbus(es)</h2>
+      <p id=changeText2 class="grey-text text-darken-3 lighten-3"></p>
+
+      <script type="text/javascript">
+
+         var text2 = ["It was the best experience of my life", "We travel, some of us forever, to seek other places, other lives, other souls", "The gladdest moment in human life, me thinks, is a departure into unknown lands", "I am not the same, having seen the moon shine on the other side of the world"];
+         var counter1 = 0;
+         var elem1 = document.getElementById("changeText2");
+         setInterval(change1, 5000);
+         function change1() {
+          elem1.innerHTML = text2[counter1];
+             counter1++;
+             if(counter1 >= text2.length) { counter1 = 0; }
+         }
+       </script>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="http://cdn.nomadsworld.com/image/resize.php?url=images/featured/hero-travel-stories-1.jpg&width=1600"></div>
+  </div>
+
+  <body>
+
+
+
+    <%= yield %>
+  </body>
+</html>

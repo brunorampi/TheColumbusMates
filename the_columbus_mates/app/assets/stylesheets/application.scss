@@ -1,0 +1,130 @@
+
+@import "materialize/components/color";
+$primary-color: color("blue", "darken-1") !default;
+$secondary-color: color("orange", "lighten-1") !default;
+$terziary-color: color("grey", "lighten-3") !default;
+
+$primary-font: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
+@import 'materialize';
+
+
+body {
+  text-align: center;
+  font-family: $primary-font;
+  color: $primary-color;
+	width: 100%;
+	height: 100%;
+  background-color: $terziary-color;
+}
+
+ .banner h1 {
+   color: $primary-color;
+
+ }
+
+ .banner h3 {
+   color: $secondary-color;
+   font-size: 2em;
+ }
+
+ .nav-fixed {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $primary-color;
+}
+
+ul.topnav li {
+  float: left;
+  width: 20%;
+  cursor: pointer;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 14px;
+  letter-spacing: 1px;
+  // font-family: $secondary-font;
+}
+
+
+ul.topnav li:hover {
+  // background-color: $tertiary-color;
+}
+
+ul.topnav li a:hover {
+  text-style: italic;
+}
+
+ul.topnav li.icon {
+  display: none;
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+
+}
+
+#quotes h4 {
+  font-size: 2em;
+}
+
+body > div.row {
+  width: 40em;
+}
+
+body > div.row > div {
+  margin-top: 4em;
+}
+
+
+#autocomplete-input {
+  text-align: center;
+}
+
+body > div.row > div > div > div > i {
+  position: relative;
+  top:42px;
+  right: -150px;
+}
+
+body > div.row > div > div > div > form > label {
+  position:relative;
+  top: -90px;
+}
