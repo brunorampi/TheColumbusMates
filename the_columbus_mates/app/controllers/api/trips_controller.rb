@@ -1,9 +1,11 @@
 class Api::TripsController < ApplicationController
 
   def index
-    trips = Trip.all
+    @trips = Trip.all
 
-    render json :trips
+    render json: trips
+
   end
+
 
 end

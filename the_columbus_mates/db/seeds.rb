@@ -9,9 +9,9 @@
 
 destinations_arr = ['Thailand', 'Italy']
 
-start_date_arr = [22-12-2016,23-12-2016]
-
-end_date_arr = [02-01-2017, 03-01-2017]
+# start_date_arr = [22-12-2016,23-12-2016]
+#
+# end_date_arr = [02-01-2017, 03-01-2017]
 
 min_mate_number_arr = [2, 4]
 max_mate_number_arr = [3, 5]
@@ -22,11 +22,13 @@ primary_picture_arr = ['https://www.ciee.org/teach/images/programs/desktop/thail
 
 trips = []
 
+Trip.delete_all
+
 2.times do |i|
   trip = Trip.new
   trip.destination = destinations_arr[i]
-  trip.start_date = start_date_arr[i]
-  trip.end_date = end_date_arr[i]
+  # trip.start_date = start_date_arr[i]
+  # trip.end_date = end_date_arr[i]
   trip.primary_picture = primary_picture_arr[i]
   trip.save
   trips.push(trip)

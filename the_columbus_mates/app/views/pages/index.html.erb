@@ -19,7 +19,7 @@
         <div class="input-field col s12">
           <i href="/trips/index" class="material-icons search">search</i>
           <form action="trips/index" method="get">
-            <input type="text" id="autocomplete-input" class="autocomplete" name="destination" placeholder="Enter your travel destination">
+            <input type="text" id="autocomplete-input" class="autocomplete" name="destination" placeholder="Enter your travel destination" autocomplete="off">
             <label for="autocomplete-input">Where do you want go?</label>
           </form>
         </div>
@@ -28,7 +28,7 @@
   </div>
 
   <div id =quotes>
-    <h4 id=changeText></h4>
+    <p id=changeText class="grey-text text-darken-3 lighten-3"></p>
 
     <script type="text/javascript">
        var text = ["Traveling – it leaves you speechless, then turns you into a storyteller", "We travel, some of us forever, to seek other places, other lives, other souls", "The gladdest moment in human life, me thinks, is a departure into unknown lands", "I am not the same, having seen the moon shine on the other side of the world"];
@@ -56,12 +56,27 @@
   </div>
   <div class="section white">
     <div class="row container" id="columbus">
-      <h2 class="header">Our Columbus(es)</h2>
+      <h2 class="header">Being a Columbus</h2>
       <p id=changeText2 class="grey-text text-darken-3 lighten-3"></p>
+      <img id=changeText3 />
 
       <script type="text/javascript">
 
-         var text2 = ["It was the best experience of my life", "We travel, some of us forever, to seek other places, other lives, other souls", "The gladdest moment in human life, me thinks, is a departure into unknown lands", "I am not the same, having seen the moon shine on the other side of the world"];
+         var profile_img = ['http://www.skinmagonline.com/sg/wp-content/uploads/2012/05/300.jpg','http://www.skinmagonline.com/sg/wp-content/uploads/2012/05/301.jpg'];
+
+         var counter3 = 0;
+         var elem3 = document.getElementById("changeText3");
+         setInterval(change3, 5000);
+         function change3() {
+          elem3.innerHTML = profile_img[counter3];
+             counter3++;
+             if(counter3 >= profile_img.length) { counter3 = 0; }
+         }
+
+
+
+
+         var text2 = ['Pedro: "It was the best experience of my life" ','Chloe: "We travel, some of us forever, to seek other places, other lives, other souls"','Dean: "The gladdest moment in human life, me thinks, is a departure into unknown lands" ', "I am not the same, having seen the moon shine on the other side of the world"];
          var counter1 = 0;
          var elem1 = document.getElementById("changeText2");
          setInterval(change1, 5000);
